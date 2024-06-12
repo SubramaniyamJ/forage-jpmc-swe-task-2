@@ -104,7 +104,7 @@ def add_book(book, order, size, _age=10):
 def clear_order(order, size, book, op=operator.ge, _notional=0):
     """ Try to clear a sized order against a book, returning a tuple of
         (notional, new_book) if successful, and None if not.  _notional is a
-        recursive accumulator and should not be provided by the caller.
+        recursive accumulator and should not be provided by the caller. 
     """
     (top_order, top_size, age), tail = book[0], book[1:]
     if op(order, top_order):
